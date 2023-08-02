@@ -86,6 +86,7 @@ public class NoteController {
             @RequestBody Note note
                             ){
         noteService.updateNote(note, note_id);
+
     }
 
 }

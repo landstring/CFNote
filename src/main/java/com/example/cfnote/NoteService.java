@@ -16,7 +16,7 @@ public class NoteService {
         return this.noteRepository.findAll();
     }
 
-    public void saveCourse(Note note) {
+    public void saveNote(Note note) {
         this.noteRepository.save(note);
     }
 
@@ -50,6 +50,6 @@ public class NoteService {
             throw new RuntimeException("Note not found for id: " + note_id);
         }
         note.setText(updateNote.getText());
-
+        this.noteRepository.save(note);
     }
 }
